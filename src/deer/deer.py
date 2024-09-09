@@ -4,14 +4,14 @@ import numpy as np
 
 # Dlib의 얼굴 검출기와 랜드마크 검출기 초기화
 detector = dlib.get_frontal_face_detector()
-predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
+predictor = dlib.shape_predictor("src/deer/shape_predictor_68_face_landmarks.dat")
 
 # 사슴 뿔 이미지 로드 (PNG 파일로 알파 채널 포함)
-horns_image = cv2.imread('deer_horns.png', cv2.IMREAD_UNCHANGED)
+horns_image = cv2.imread('src/deer/Data/deer_horns.png', cv2.IMREAD_UNCHANGED)
  
 # 입력 이미지 로드
-input_image_path = 'Data/input_img.jpg'
-output_image_path = 'output_image.jpg'
+input_image_path = 'src/deer/Data/input_img.jpg'
+output_image_path = 'src/deer/Data/output_image.jpg'
 input_image = cv2.imread(input_image_path)
 
 # 그레이스케일로 변환
